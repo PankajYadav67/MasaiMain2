@@ -1,18 +1,12 @@
 const express = require("express");
-
 const app = express();
+const dnsRouters = require("./routes/dns.routes");
 
-const adminMiddleware = (req, res, next) => {
-  if (req.query.q == "admin") {
-    res.send("access granted");
-  }
-  res.send("access denied.");
-};
+app.use(express.json());
 
-app.use(adminMiddleware);
+app.use("/dns", dnsRouters);
 
 app.get("/", (req, res) => {
-  console.log("you are in home");
   res.send("this is homepage.");
 });
 
@@ -36,3 +30,10 @@ app.listen(8080, () => {
 //   next();
 //   console.log("m");
 // });
+
+// const adminMiddleware = (req, res, next) => {
+//   if (req.query.q == "admin") {
+//     res.send("access granted");
+//   }
+//   res.send("access denied.");
+// };
