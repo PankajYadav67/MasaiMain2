@@ -1,0 +1,3 @@
+typescript is typed define variable in js file.
+
+
