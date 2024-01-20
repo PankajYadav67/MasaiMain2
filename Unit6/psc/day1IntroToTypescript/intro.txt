@@ -1,3 +1,23 @@
 typescript is typed define variable in js file.
 
 
+
+# Premitive Data Type
+- number
+- string
+- boolean
+- null
+- undefined
+- symbol
+- nan
+
+# non-Premitive data type
+- array
+- object
+- function
+    -arguments
+    -optional arguments
+    -default arguments
+-void
+-custom types
+-interface/inheritage
