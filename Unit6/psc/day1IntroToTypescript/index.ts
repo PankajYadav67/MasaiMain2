@@ -26,7 +26,7 @@ b =41;
 
 
 
-let arr : Array<number> = [12,65,445];
+let arrNum : Array<number> = [12,65,445];
 const arrString : string[] = ["247","258","836"];
 
 
