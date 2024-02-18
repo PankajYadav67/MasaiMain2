@@ -2,7 +2,7 @@ enum Subject {
     Chemistry,
     Physics,
     Maths,
-};
+}
 
 type User = {
     id: number;
@@ -46,21 +46,21 @@ function sort<T>(arr: T[], sortBy: Sortable<T>): T[] {
 
 // Example usage with an array of Users
 const users: User[] = [
-    { id: 3, name: 'Alice', age: 25, salary: 50000 },
-    { id: 1, name: 'Bob', age: 30, salary: 60000 },
-    { id: 2, name: 'Charlie', age: 22, salary: 45000 },
+    { id: 3, name: "Alice", age: 25, salary: 50000 },
+    { id: 1, name: "Bob", age: 30, salary: 60000 },
+    { id: 2, name: "Charlie", age: 22, salary: 45000 },
 ];
 
-const sortedUsersById = sort(users, 'id');
+const sortedUsersById = sort(users, "id");
 console.log(sortedUsersById);
 
 // Example usage with an array of Teachers
 const teachers: Teacher[] = [
-    { id: 2, name: 'TeacherB', subject: Subject.Physics, numberOfStudents: 30 },
-    { id: 1, name: 'TeacherA', subject: Subject.Maths, numberOfStudents: 25 },
-    { id: 3, name: 'TeacherC', subject: Subject.Chemistry, numberOfStudents: 20 },
+    { id: 2, name: "TeacherB", subject: Subject.Physics, numberOfStudents: 30 },
+    { id: 1, name: "TeacherA", subject: Subject.Maths, numberOfStudents: 25 },
+    { id: 3, name: "TeacherC", subject: Subject.Chemistry, numberOfStudents: 20 },
 ];
 
-const sortedTeachersByName = sort(teachers, 'name');
-const sortedTeachersByNumberOfStudents = sort(teachers, 'numberOfStudents');
+const sortedTeachersByName = sort(teachers, "name");
+const sortedTeachersByNumberOfStudents = sort(teachers, "numberOfStudents");
 console.log(sortedTeachersByName);
