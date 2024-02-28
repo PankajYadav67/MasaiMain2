@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export const useApi = (getData ) => {
+export const useDelayedApi = (getData) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [data, setData] = useState([]);
 
-    const api = async () => {
+    const api = async (params) => {
         try {
             setLoading(true);
-            let d = await getData();
+            let d = await getData(params);
             setData(d);
         } catch (error) {
             setError(true);
@@ -18,9 +18,7 @@ export const useApi = (getData ) => {
             setError(false);
         }
     }
-    useEffect(() => {
-        api();
-    }, []);
 
-    return { loading, data, error, Refresh : api }
+
+    return { loading, data, error, Refresh: api, mutate: api }
 }
