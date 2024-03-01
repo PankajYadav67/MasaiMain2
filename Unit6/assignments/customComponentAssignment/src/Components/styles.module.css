@@ -1,0 +1,25 @@
+/* styles.module.css */
+
+.pinInputWrapper {
+  display: flex;
+}
+
+.pinInputFieldWrapper {
+  width: 3em;
+  height: 3em;
+  margin: 0 0.5em;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+/* Add the following styles for the allFilled state */
+.pinInputWrapper.allFilled {
+  border-color: green;
+}
+
+.pinInputFieldWrapper.allFilled {
+  border-color: green;
+  color: green; /* Change the text color to green */
+}
