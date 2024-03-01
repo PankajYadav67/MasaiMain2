@@ -1,0 +1,9 @@
+.pinInputWrapper {
+  display: flex;
+  gap: 0.9rem;
+}
+.pinInputFieldWrapper {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
